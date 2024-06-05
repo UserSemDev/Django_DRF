@@ -1,0 +1,101 @@
+[
+  {
+    "model": "materials.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "Основы языка",
+      "description": "Основы языка Python",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 1
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 2,
+    "fields": {
+      "title": "Основы языка",
+      "description": "Основы языка Java",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 2
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 3,
+    "fields": {
+      "title": "Основы языка",
+      "description": "Основы языка C++",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 3
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 4,
+    "fields": {
+      "title": "Продвинутый синтаксис",
+      "description": "Продвинутый синтаксис языка Python",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 1
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 5,
+    "fields": {
+      "title": "Продвинутый синтаксис",
+      "description": "Продвинутый синтаксис языка Java",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 2
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 6,
+    "fields": {
+      "title": "Продвинутый синтаксис",
+      "description": "Продвинутый синтаксис языка C++",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 3
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 7,
+    "fields": {
+      "title": "ООП",
+      "description": "Основы ООП языка Python",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 1
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 8,
+    "fields": {
+      "title": "ООП",
+      "description": "Основы ООП языка Java",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 2
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 9,
+    "fields": {
+      "title": "ООП",
+      "description": "Основы ООП языка C++",
+      "preview": "lesson/image/default_lesson.jpg",
+      "url": null,
+      "course": 3
+    }
+  }
+]

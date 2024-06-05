@@ -1,0 +1,29 @@
+[
+  {
+    "model": "materials.course",
+    "pk": 1,
+    "fields": {
+      "title": "Python developer",
+      "description": "Курс по Python разработке",
+      "preview": "course/image/default_course.jpg"
+    }
+  },
+  {
+    "model": "materials.course",
+    "pk": 2,
+    "fields": {
+      "title": "Java developer",
+      "description": "Курс по Java разработке",
+      "preview": "course/image/default_course.jpg"
+    }
+  },
+  {
+    "model": "materials.course",
+    "pk": 3,
+    "fields": {
+      "title": "C++ developer",
+      "description": "Курс по C++ разработке",
+      "preview": "course/image/default_course.jpg"
+    }
+  }
+]
