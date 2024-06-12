@@ -66,12 +66,12 @@ pip install -r requirements.txt
 - В корне проекта переименуйте файл .env.sample в .env и отредактируйте параметры:
     ```text
     # Postgresql
-    ENGINE="postgresql_psycopg2" - используем psycopg2
-    NAME="db_name" - название вашей БД
-    PGUSER="postgres" - имя пользователя БД
-    PASSWORD="secret" - пароль пользователя БД
-    HOST="host" - можно указать "localhost" или "127.0.0.1"
-    PORT=port - указываете порт для подключения по умолчанию 5432
+    PG_ENGINE="postgresql_psycopg2" - используем psycopg2
+    PG_NAME="db_name" - название вашей БД
+    PG_PGUSER="postgres" - имя пользователя БД
+    PG_PASSWORD="secret" - пароль пользователя БД
+    PG_HOST="host" - можно указать "localhost" или "127.0.0.1"
+    PG_PORT=port - указываете порт для подключения по умолчанию 5432
     
     # Django
     SECRET_KEY=secret_key - секретный ключ django проекта
