@@ -5,7 +5,8 @@
     "fields": {
       "title": "Python developer",
       "description": "Курс по Python разработке",
-      "preview": "course/image/default_course.jpg"
+      "preview": "course/image/default_course.jpg",
+      "owner": 1
     }
   },
   {
@@ -14,7 +15,8 @@
     "fields": {
       "title": "Java developer",
       "description": "Курс по Java разработке",
-      "preview": "course/image/default_course.jpg"
+      "preview": "course/image/default_course.jpg",
+      "owner": 2
     }
   },
   {
@@ -23,7 +25,8 @@
     "fields": {
       "title": "C++ developer",
       "description": "Курс по C++ разработке",
-      "preview": "course/image/default_course.jpg"
+      "preview": "course/image/default_course.jpg",
+      "owner": 3
     }
   }
 ]

@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$720000$U8OD8CRdFNO7ADPjrvD7Vd$ZjDBSAtI+DVdAgwVvC2gnOfBSIE6ImLKOMhLeQsPghM=",
-      "last_login": null,
+      "last_login": "2024-06-12T11:15:19.141Z",
       "is_superuser": true,
       "is_staff": true,
       "is_active": true,
@@ -14,6 +14,48 @@
       "last_name": "Васильев",
       "phone": "+7(000) 123-45-67",
       "city": "Москва",
+      "avatar": "users/avatars/no_avatar.png",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$AGUFdkFYATFAzl8wHQnwwG$nRex/i9cNRsE+51RkGziNUY6XpYe1thhYjvg3pRQDDU=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-12T10:56:42Z",
+      "email": "moderator@example.com",
+      "first_name": "Алексей",
+      "last_name": "Арканов",
+      "phone": null,
+      "city": null,
+      "avatar": "users/avatars/no_avatar.png",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$A924K3rqW7l5MxzukFlgPd$QjviqaW3eyBmwbVApPy7Q6Br5Rtqku9h0jzh+uslyxQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-12T12:48:11.689Z",
+      "email": "simpleuser@example.com",
+      "first_name": "Сергей",
+      "last_name": "Максимов",
+      "phone": null,
+      "city": null,
       "avatar": "users/avatars/no_avatar.png",
       "groups": [],
       "user_permissions": []
