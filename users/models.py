@@ -30,6 +30,7 @@ class User(AbstractUser):
 
 
 class Payments(models.Model):
+    """Модель платежей"""
     class PaymentMethodChoices(models.TextChoices):
         CASH = "Наличные", _("Наличные")
         CARD = "Карта", _("Карта")
@@ -49,4 +50,17 @@ class Payments(models.Model):
     class Meta:
         verbose_name = 'платеж'
         verbose_name_plural = 'платежи'
-        ordering = ['-payment_date',]
+        ordering = ['-payment_date', ]
+
+
+class Subscription(models.Model):
+    """Модель подписки"""
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="пользователь")
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name="курс")
+
+    def __str__(self):
+        return f"{self.user} | {self.course}"
+
+    class Meta:
+        verbose_name = 'подписка'
+        verbose_name_plural = 'подписки'

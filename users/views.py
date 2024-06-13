@@ -1,14 +1,18 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter
+from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import AllowAny
-from users.models import User, Payments
+from rest_framework.response import Response
+from materials.models import Course
+from users.models import User, Payments, Subscription
 from users.permissions import IsOwnerOrReadOnly
 from users.serializers import UserSerializer, PaymentsSerializer, UserDetailSerializer, UserRegisterSerializer, \
     UserNotOwnerSerializer
-from rest_framework import generics
+from rest_framework import generics, views
 
 
 class UserCreateAPIView(generics.CreateAPIView):
+    """Эндпоинт создания пользователя"""
     serializer_class = UserRegisterSerializer
     permission_classes = [AllowAny]
 
@@ -19,6 +23,7 @@ class UserCreateAPIView(generics.CreateAPIView):
 
 
 class UserRetrieveApiView(generics.RetrieveAPIView):
+    """Эндпоинт просмотра пользователя"""
     queryset = User.objects.all()
 
     def get_serializer_class(self):
@@ -29,21 +34,25 @@ class UserRetrieveApiView(generics.RetrieveAPIView):
 
 
 class UserListAPIView(generics.ListAPIView):
+    """Эндпоинт просмотра списка пользователей"""
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
 
 class UserUpdateAPIView(generics.UpdateAPIView):
+    """Эндпоинт редактирования пользователя"""
     serializer_class = UserSerializer
     queryset = User.objects.all()
     permission_classes = [IsOwnerOrReadOnly]
 
 
 class UserDestroyAPIView(generics.DestroyAPIView):
+    """Эндпоинт удаления пользователя"""
     queryset = User.objects.all()
 
 
 class PaymentsListAPIView(generics.ListAPIView):
+    """Эндпоинт просмотра списка платежей"""
     serializer_class = PaymentsSerializer
     queryset = Payments.objects.all()
     filter_backends = [OrderingFilter, DjangoFilterBackend]
@@ -52,4 +61,21 @@ class PaymentsListAPIView(generics.ListAPIView):
 
 
 class PaymentsCreateAPIView(generics.CreateAPIView):
+    """Эндпоинт создания платежа"""
     serializer_class = PaymentsSerializer
+
+
+class SubscribeAPIView(views.APIView):
+    """"Эндпоинт добавления/удаления подписки пользователя"""
+    def post(self, *args, **kwargs):
+        user = self.request.user
+        course_id = self.request.data.get('course')
+        course_item = get_object_or_404(Course, pk=course_id)
+        subs_item = Subscription.objects.filter(user=user, course=course_item)
+        if subs_item.exists():
+            subs_item.delete()
+            message = 'подписка удалена'
+        else:
+            Subscription.objects.create(user=user, course=course_item)
+            message = 'подписка добавлена'
+        return Response({"message": message})
