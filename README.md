@@ -76,6 +76,9 @@ pip install -r requirements.txt
     # Django
     SECRET_KEY=secret_key - секретный ключ django проекта
     DEBUG=True - режим DEBUG
+  
+    # API Stripe
+    STRIPE_API_KEY=secret_key - секретный ключ от API stripe.com
     ```
 
 ### 4. Настройка БД:
