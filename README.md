@@ -79,6 +79,13 @@ pip install -r requirements.txt
   
     # API Stripe
     STRIPE_API_KEY=secret_key - секретный ключ от API stripe.com
+  
+    # Mailing
+    EMAIL_HOST_USER=
+    EMAIL_HOST_PASSWORD=
+    
+    # Redis
+    REDIS=
     ```
 
 ### 4. Настройка БД:
