@@ -20,6 +20,9 @@
 - Django
 - PostgreSQL
 - DRF
+- Celery
+- Redis
+- Docker
 
 
 ## Настройка проекта
@@ -66,12 +69,12 @@ pip install -r requirements.txt
 - В корне проекта переименуйте файл .env.sample в .env и отредактируйте параметры:
     ```text
     # Postgresql
-    PG_ENGINE="postgresql_psycopg2" - используем psycopg2
-    PG_NAME="db_name" - название вашей БД
-    PG_PGUSER="postgres" - имя пользователя БД
-    PG_PASSWORD="secret" - пароль пользователя БД
-    PG_HOST="host" - можно указать "localhost" или "127.0.0.1"
-    PG_PORT=port - указываете порт для подключения по умолчанию 5432
+    POSTGRES_ENGINE="postgresql_psycopg2" - используем psycopg2
+    POSTGRES_NAME="db_name" - название вашей БД
+    POSTGRES_PGUSER="postgres" - имя пользователя БД
+    POSTGRES_PASSWORD="secret" - пароль пользователя БД
+    POSTGRES_HOST="host" - можно указать "localhost" или "127.0.0.1"
+    POSTGRES_PORT=port - указываете порт для подключения по умолчанию 5432
     
     # Django
     SECRET_KEY=secret_key - секретный ключ django проекта
@@ -103,12 +106,20 @@ pip install -r requirements.txt
 
 ## Использование
 
-- Для запуска проекта наберите в терминале команду:
+#### Для запуска локально проекта наберите в терминале команду:
   ```text
   python manage.py runserver
   ```
   перейдите по адресу: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
+
+#### Для запуска проекта через Docker:
+- установите Docker себе в систему, перейдя по [ссылке](https://docs.docker.com/engine/install/)
+- для сборки проекта и запуска введите команду:
+  ```text
+  docker-compose up -d --build
+  ```
+- перейдите по адресу: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Контакты
 
